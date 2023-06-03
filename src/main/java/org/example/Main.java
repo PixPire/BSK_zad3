@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.HashMap;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -70,7 +68,9 @@ public class Main {
             for (int i = 0; i < key.length(); i++) {//iteruje po każdej pozycji w tablicy klucza
                 if (keyArray[i] == activeChar) {//jezeli pozycja zgadza sie z aktywnie rozpatrywaną cyfrą lub literą
                     for (int j = i; j < text.length(); j += key.length()) {
-                        codedTextBuiler.append(text.charAt(j));//...dodaje literę o takiej samej odleglosci od poczatku tekstu do kodowania jak rozpatrywana ma od początku klucza i każdą kolejną literę z tej samej kolumny macierzy (w odległości jednej długości klucza) do wyniku, po czym wraca do iterowania po pozycjach klucza
+                        codedTextBuiler.append(text.charAt(j));//...dodaje literę o takiej samej odleglosci od poczatku tekstu
+                        // do kodowania jak rozpatrywana ma od początku klucza i każdą kolejną literę z tej samej kolumny macierzy
+                        // (w odległości jednej długości klucza) do wyniku, po czym wraca do iterowania po pozycjach klucza
                     }
                 }
             }
